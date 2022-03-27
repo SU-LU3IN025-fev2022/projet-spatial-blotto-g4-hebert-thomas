@@ -20,7 +20,6 @@ import pySpriteWorld.glo
 
 from search.grid2D import ProblemeGrid2D
 from search import probleme
-import withoutBudget
 
 
 
@@ -121,9 +120,102 @@ def main():
     #-------------------------------
     
 
+    listPaths = []
+    CoupleMilEl = []
+    g =np.ones((nbLignes,nbCols),dtype=bool)  # par defaut la matrice comprend des True  
+    for w in wallStates:            # putting False for walls
+        g[w]=False
     
+    for i in range(len(initStates)):
+        elect = random.randrange(4)
+        p = ProblemeGrid2D(initStates[i],objectifs[elect],g,'manhattan')
+        path = probleme.astar(p)
+        print ("Chemin trouvé joueur" + str(i) + ":", path)
+        listPaths.append(path)
+        CoupleMilEl.append(elect)
+        
+    
+    #-------------------------------
+    # Boucle principale de déplacements 
+    #-------------------------------
+    
+            
+    posPlayers = initStates
+    Finished = []
+    score = dict()
+    for i in range(len(objectifs)):
+        score[i] = (0,0)
 
-    withoutBudget.aleatoire(initStates, wallStates, posPlayers, objectifs, players, game)
+    for i in range(iterations):
+        
+        # on fait bouger chaque joueur séquentiellement
+        
+        # Joueur 0: suit son chemin trouve avec A* 
+        
+        if len(Finished) == len(listPaths):
+            break;
+        
+        for j in range(len(listPaths)):
+            if j not in Finished:
+                path = listPaths[j]
+                row,col = path[i]
+                posPlayers[j]=(row,col)
+                players[j].set_rowcol(row,col)
+                print ("pos" + str(j) + ":", row,col)
+                elect = CoupleMilEl[j]
+                if (row,col) == objectifs[elect]:
+                    print("le joueur " + str(j) + " a atteint son but!")
+                    Finished.append(j)
+                    t1, t2 = score[elect]
+                    if j%2 == 0:
+                        t1 +=1
+                    else:
+                        t2 += 1
+                    score[elect] = (t1,t2)
+        
+        """
+        # Joueur 1: fait du random walk
+        
+        row,col = posPlayers[1]
+
+        while True: # tant que pas legal on retire une position
+            x_inc,y_inc = random.choice([(0,1),(0,-1),(1,0),(-1,0)])
+            next_row = row+x_inc
+            next_col = col+y_inc
+            if legal_position(next_row,next_col):
+                break
+        players[1].set_rowcol(next_row,next_col)
+        print ("pos 1:", next_row,next_col)
+    
+        col=next_col
+        row=next_row
+        posPlayers[1]=(row,col)
+            
+        if (row,col) == objectifs[1]:
+            print("le joueur 1 a atteint son but!")
+            break
+        """
+            
+            
+        
+        # on passe a l'iteration suivante du jeu
+        game.mainiteration()
+
+                
+        
+            
+    pygame.quit()
+    print("score :", score)
+
+    tot1 = 0
+    tot2 = 0
+    for res in score:
+        t1, t2 = score[res]
+        if t1 > t2:
+            tot1 += 1
+        elif t1 < t2:
+            tot2 += 1
+    print("score parti 1:", tot1, "; score parti 2:", tot2)
     
     
     
@@ -140,6 +232,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-    
-
-
