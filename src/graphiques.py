@@ -12,7 +12,7 @@ plt.legend(loc = "upper left")
 plt.xlabel("Numéro de campagne")
 plt.ylabel("Nombre d'électeurs récoltés")
 plt.title("Aléatoire VS aléatoire")
-plt.savefig("../docs/resultats/Aléatoire VS aléatoire")
+plt.savefig("../docs/resultats/aleatoireVSaleatoire.jpg")
 plt.show()
 
 # aleatoire vs tetu
@@ -24,7 +24,7 @@ plt.legend(loc = "upper left")
 plt.xlabel("Numéro de campagne")
 plt.ylabel("Nombre d'électeurs récoltés")
 plt.title("Aléatoire VS Tétu")
-plt.savefig("../docs/resultats/Aléatoire VS Tétu")
+plt.savefig("../docs/resultats/aleatoireVStetu.jpg")
 plt.show()
 
 # aleatoire vs stochastique
@@ -36,7 +36,7 @@ plt.legend(loc = "upper left")
 plt.xlabel("Numéro de campagne")
 plt.ylabel("Nombre d'électeurs récoltés")
 plt.title("Aléatoire VS Stochastique")
-plt.savefig("../docs/resultats/Aléatoire VS Stochastique")
+plt.savefig("../docs/resultats/aleatoireVSstochastique.jpg")
 plt.show()
 
 # aleatoire vs meilleure reponse
@@ -48,7 +48,7 @@ plt.legend(loc = "upper left")
 plt.xlabel("Numéro de campagne")
 plt.ylabel("Nombre d'électeurs récoltés")
 plt.title("Aléatoire VS Meilleure réponse")
-plt.savefig("../docs/resultats/Aléatoire VS Meilleure réponse")
+plt.savefig("../docs/resultats/aleatoireVSmr.jpg")
 plt.show()
 
 # aleatoire vs fictitious play
@@ -60,7 +60,7 @@ plt.legend(loc = "upper left")
 plt.xlabel("Numéro de campagne")
 plt.ylabel("Nombre d'électeurs récoltés")
 plt.title("Aléatoire VS Fictitious play")
-plt.savefig("../docs/resultats/Aléatoire VS Fictitious play")
+plt.savefig("../docs/resultats/aleatoireVSfictitious.jpg")
 plt.show()
 
 
@@ -73,7 +73,7 @@ plt.legend(loc = "upper left")
 plt.xlabel("Numéro de campagne")
 plt.ylabel("Nombre d'électeurs récoltés")
 plt.title("Tétu VS Tétu")
-plt.savefig("../docs/resultats/Tétu VS Tétu")
+plt.savefig("../docs/resultats/tetuVStetu.jpg")
 plt.show()
 
 # tetu vs stochastique
@@ -85,7 +85,7 @@ plt.legend(loc = "upper left")
 plt.xlabel("Numéro de campagne")
 plt.ylabel("Nombre d'électeurs récoltés")
 plt.title("Tétu VS Stochastique")
-plt.savefig("../docs/resultats/Tétu VS Stochastique")
+plt.savefig("../docs/resultats/tetuVSstochastique.jpg")
 plt.show()
 
 # tetu vs meilleure reponse
@@ -97,7 +97,7 @@ plt.legend(loc = "upper left")
 plt.xlabel("Numéro de campagne")
 plt.ylabel("Nombre d'électeurs récoltés")
 plt.title("Tétu VS Meilleure réponse")
-plt.savefig("../docs/resultats/Tétu VS Meilleure réponse")
+plt.savefig("../docs/resultats/tetuVSmr.jpg")
 plt.show()
 
 # tetu vs fictitious play
@@ -109,7 +109,7 @@ plt.legend(loc = "upper left")
 plt.xlabel("Numéro de campagne")
 plt.ylabel("Nombre d'électeurs récoltés")
 plt.title("Tétu VS Fictitious play")
-plt.savefig("../docs/resultats/Tétu VS Fictitious play")
+plt.savefig("../docs/resultats/tetuVSfictitious.jpg")
 plt.show()
 
 
@@ -122,7 +122,7 @@ plt.legend(loc = "upper left")
 plt.xlabel("Numéro de campagne")
 plt.ylabel("Nombre d'électeurs récoltés")
 plt.title("Stochastique VS Stochastique")
-plt.savefig("../docs/resultats/Stochastique VS Stochastique")
+plt.savefig("../docs/resultats/stochastiqueVSstochastique.jpg")
 plt.show()
 
 # stochastique vs meilleure reponse
@@ -134,7 +134,7 @@ plt.legend(loc = "upper left")
 plt.xlabel("Numéro de campagne")
 plt.ylabel("Nombre d'électeurs récoltés")
 plt.title("Stochastique VS Meilleure réponse")
-plt.savefig("../docs/resultats/Stochastique VS Meilleure réponse")
+plt.savefig("../docs/resultats/stochastiqueVSmr.jpg")
 plt.show()
 
 # stochastique vs fictitious play
@@ -146,7 +146,7 @@ plt.legend(loc = "upper left")
 plt.xlabel("Numéro de campagne")
 plt.ylabel("Nombre d'électeurs récoltés")
 plt.title("Stochastique VS Fictitious play")
-plt.savefig("../docs/resultats/Stochastique VS Fictitious play")
+plt.savefig("../docs/resultats/stochastiqueVSfictitious.jpg")
 plt.show()
 
 
@@ -159,7 +159,7 @@ plt.legend(loc = "upper left")
 plt.xlabel("Numéro de campagne")
 plt.ylabel("Nombre d'électeurs récoltés")
 plt.title("Meilleure réponse VS Meilleure réponse")
-plt.savefig("../docs/resultats/Meilleure réponse VS Meilleure réponse")
+plt.savefig("../docs/resultats/mrVSmr.jpg")
 plt.show()
 
 # meilleure reponse vs fictitious play
@@ -171,7 +171,7 @@ plt.legend(loc = "upper left")
 plt.xlabel("Numéro de campagne")
 plt.ylabel("Nombre d'électeurs récoltés")
 plt.title("Meilleure réponse VS Fictitious play")
-plt.savefig("../docs/resultats/Meilleure réponse VS Fictitious play")
+plt.savefig("../docs/resultats/mrVSfictitious.jpg")
 plt.show()
 
 
@@ -184,5 +184,5 @@ plt.legend(loc = "upper left")
 plt.xlabel("Numéro de campagne")
 plt.ylabel("Nombre d'électeurs récoltés")
 plt.title("Fictitious play VS Fictitious play")
-plt.savefig("../docs/resultats/Fictitious play VS Fictitious play")
+plt.savefig("../docs/resultats/fictitiousVSfictitious.jpg")
 plt.show()

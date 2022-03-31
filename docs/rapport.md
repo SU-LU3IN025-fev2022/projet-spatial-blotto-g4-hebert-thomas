@@ -20,4 +20,78 @@ La fonction fictitious va jouer en meilleure réponse pour l'utilité espérée 
 
 ## Description des résultats
 
-![aleatoire vs aleatoire](/docs/resultats/101328.png "Aléatoire VS aléatoire")
+Tous les tests ont été réalisés sur 7 campagnes, chacune de 14 jours. Le k utilisé pour la fonction stochastique est de 15.
+### Fonction aléatoire
+
+Quand on la compare à elle-même, la fonction aléatoire ne produit pas de résultat probant, de par sa nature. Aucun parti ne peut véritablement gagner de façon certaine.
+
+![aleatoire vs aleatoire](/docs/resultats/aleatoireVSaleatoire.jpg "Aléatoire VS aléatoire")
+
+Si on confronte aléatoire et tétu, on remarque que les victoires de ce dernier dépend beaucoup du premier choix de stratégie le premier jour. S'il choisi une stratégie pertinente, il aura de grandes chances de gagner mais s'il choisi une stratégie inutile comme [0,0,0,0,7] par exemple, ses chances de gagner sont quasi nulles.
+
+![aleatoire vs tetu](/docs/resultats/aleatoireVStetu.jpg "Aléatoire VS Tétu")
+
+Stochastique obtient de bonnes performances face à aléatoire mais la nature de ce dernier fait qu'il ne peut pas prédire à 100% une stratégie gagnante parmi toutes celles pertinentes.
+
+![aleatoire vs stochastique](/docs/resultats/aleatoireVSstochastique.jpg "Aléatoire VS Stochastique")
+
+Meilleure réponse surpasse sans nul doute aléatoire sur chaque campagne. Comme il aura toujours tendence à choisir une stratégie parmi les meilleures, aléatoire e peut pas rivaliser vu le nombres de stratégies non pertinentes possibles.
+
+![aleatoire vs mr](/docs/resultats/aleatoireVSmr.jpg "Aléatoire VS Meilleure réponse")
+
+Etrangement, fictitious play ne va pas gagner à tous les coups face à aléatoire. Cela est sûrement du au caractère imprévisible d'aléatoire qui va noyer les probabilités de fictitious, ce dernier aura donc du mal à costamment trouver la meilleure réponse.
+
+![aleatoire vs fictitious](/docs/resultats/aleatoireVSfictitious.jpg "Aléatoire VS Fictitious play")
+
+### Fonction tétu
+
+Face à lui-même, encore une fois tout dépend du premier jour. Si l'un des 2 partis prend l'avantage ce jour là, il le gardera pour le reste de la campagne.
+
+![tetu vs tetu](/docs/resultats/tetuVStetu.jpg "Tétu VS Tétu")
+
+Grâce à la ature statique de tétu, stochastique va pouvoir constamment prévoir le meilleur coup à jouer et ainsi ne jamais perdre.
+
+![tetu vs stochastique](/docs/resultats/tetuVSstochastique.jpg "Tétu VS Stochastique")
+
+Même cas que précédemment, meilleure réponse va constamment prévoir le meilleur coup que tétu car ce dernier ne change jamais.
+
+![tetu vs mr](/docs/resultats/tetuVSmr.jpg "Tétu VS Meilleure réponse")
+
+Face à fictitious, tétu ne fait pas le poids non plus. A force de jouer le même coup, fictitious aura une probabilité quasiment max sur le coup de tétu, menant à une défaite inévitable de ce dernier.
+
+![tetu vs fictitious](/docs/resultats/tetuVSfictitious.jpg "Tétu VS Fictitious play")
+
+### Fonction stochastique
+
+Face à lui-même, c'est ici celui qui aura le plus de chance dans les stratégies pertinentes choisies. Globalement ils sont quasiment tout le temps très proches sur les résultats, et ils s'échangent les victoires.
+
+![stochastique vs stochastique](/docs/resultats/stochastiqueVSstochastique.jpg "Stochastique VS Stochastique")
+
+L'efficacité de stochastique est très inférieure à celle de meilleure réponse. Ce dernier s'adapte vite et si jamais stochastique rejoue des coups identiques a des jours précédents il sera désavantagé.
+
+![stochastique vs mr](/docs/resultats/stochastiqueVSmr.jpg "Stochastique VS Meilleure réponse")
+
+Fictitious a souvent l'avantage sur stochastique. Son système de probabilités est plus élaboré et plus la campagne a de jours, plus il aura répertorié tous les coups possibles de stochastiques pour des probabilités plus précises.
+
+![stochastique vs fictitious](/docs/resultats/stochastiqueVSfictitious.jpg "Stochastique VS Fictitious play")
+
+### Fonction MR (Meilleure Réponse)
+
+Contre lui-même, meilleure réponse a environ 50% de chances de gagner. Chacun s'adapte à l'autre, ce qui cause une alternance des victoires, autant sur les jours que sur différentes campagnes.
+
+![mr vs mr](/docs/resultats/mrVSmr.jpg "Meilleure réponse VS Meilleure réponse")
+
+Difficile de trouver une constance entre meilleure réponse et fictitious. Chacun essaie de prédire l'autre mais la nature changeante de meilleure réponse peut noyer en quelque sorte les probabilités de fictitious avec un grand nombre de coups différents.
+
+![mr vs fictitious](/docs/resultats/mrVSfictitious.jpg "Meilleure réponse VS Fictitious play")
+
+### Fonction fictitious
+
+La dernière comparaison à parcourir est fictitious avec lui-même. Comme prévu, les 2 s'annulent entre eux, causant là encore une alternance de victoires sur les jours et les campagnes.
+
+![fictitious vs fictitious](/docs/resultats/fictitiousVSfictitious.jpg "Fictitious play VS Fictitious play")
+
+### Budget de déplacement
+
+Je n'ai malheureusement pas eu le temps d'implémenter les 2 versions de budget de déplacement.
+
