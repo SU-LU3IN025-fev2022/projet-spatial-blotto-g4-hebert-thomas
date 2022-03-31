@@ -119,7 +119,7 @@ def main():
     # calcul A* pour le joueur 0
     #-------------------------------
     
-
+    
     listPaths = []
     CoupleMilEl = []
     g =np.ones((nbLignes,nbCols),dtype=bool)  # par defaut la matrice comprend des True  
