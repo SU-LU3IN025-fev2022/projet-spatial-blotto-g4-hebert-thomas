@@ -20,4 +20,4 @@ La fonction fictitious va jouer en meilleure réponse pour l'utilité espérée 
 
 ## Description des résultats
 
-![aleatoire vs aleatoire](../resultats/101328.png "Aléatoire VS aléatoire")
+![aleatoire vs aleatoire](/resultats/101328.png "Aléatoire VS aléatoire")
