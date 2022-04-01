@@ -28,8 +28,8 @@ plt.savefig("../docs/resultats/aleatoireVStetu.jpg")
 plt.show()
 
 # aleatoire vs stochastique
-AVS1 = [24, 18, 22, 19, 24, 21, 24]
-AVS2 = [23, 21, 25, 26, 20, 21, 22]
+AVS1 = [22, 21, 26, 19, 20, 21, 21]
+AVS2 = [24, 23, 20, 26, 25, 21, 22]
 plt.plot(y, AVS1, label = "Aléatoire")
 plt.plot(y, AVS2, label = "Stochastique")
 plt.legend(loc = "upper left")
@@ -77,8 +77,8 @@ plt.savefig("../docs/resultats/tetuVStetu.jpg")
 plt.show()
 
 # tetu vs stochastique
-TVS1 = [28, 14, 25, 28, 28, 27, 14]
-TVS2 = [28, 26, 25, 28, 28, 28, 28]
+TVS1 = [28, 17, 14, 14, 16, 14, 15]
+TVS2 = [28, 28, 28, 28, 26, 28, 26]
 plt.plot(y, TVS1, label = "Tétu")
 plt.plot(y, TVS2, label = "Stochastique")
 plt.legend(loc = "upper left")
@@ -114,8 +114,8 @@ plt.show()
 
 
 # stochastique vs stochastique
-SVS1 = [25, 15, 27, 22, 25, 28, 27]
-SVS2 = [26, 17, 27, 23, 25, 27, 26]
+SVS1 = [18, 17, 17, 20, 19, 19, 18]
+SVS2 = [20, 18, 15, 18, 21, 18, 21]
 plt.plot(y, SVS1, label = "Stochastique")
 plt.plot(y, SVS2, label = "Stochastique")
 plt.legend(loc = "upper left")
@@ -126,8 +126,8 @@ plt.savefig("../docs/resultats/stochastiqueVSstochastique.jpg")
 plt.show()
 
 # stochastique vs meilleure reponse
-SVMR1 = [28, 26, 27, 28, 28, 26, 28]
-SVMR2 = [40, 40, 40, 27, 38, 39, 40]
+SVMR1 = [28, 25, 24, 28, 24, 28, 25]
+SVMR2 = [34, 35, 33, 34, 31, 31, 33]
 plt.plot(y, SVMR1, label = "Stochastique")
 plt.plot(y, SVMR2, label = "Meilleure réponse")
 plt.legend(loc = "upper left")
@@ -138,8 +138,8 @@ plt.savefig("../docs/resultats/stochastiqueVSmr.jpg")
 plt.show()
 
 # stochastique vs fictitious play
-SVF1 = [22, 22, 20, 20, 23, 22, 21]
-SVF2 = [22, 24, 20, 21, 20, 20, 24]
+SVF1 = [21, 21, 25, 22, 24, 25, 22]
+SVF2 = [23, 22, 23, 26, 23, 19, 20]
 plt.plot(y, SVF1, label = "Stochastique")
 plt.plot(y, SVF2, label = "Fictitious play")
 plt.legend(loc = "upper left")

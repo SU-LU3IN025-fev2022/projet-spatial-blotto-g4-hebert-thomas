@@ -102,7 +102,7 @@ def stochastique(g, initStates, objectifs, equipe, k, lStoch, monCoup, coupAdver
             lStoch[tuple(monCoup)] = 0.5
     
     if monCoup != [] and coupAdvers != []:
-        if gagnant(monCoup, coupAdvers) == 2:
+        if gagnant(monCoup, coupAdvers) > gagnant(coupAdvers, monCoup):
             coup = tuple(monCoup)
             lStoch[coup] += 0.25
         else:
