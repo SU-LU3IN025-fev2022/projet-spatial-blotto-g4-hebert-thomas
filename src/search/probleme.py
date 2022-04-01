@@ -101,10 +101,10 @@ class Noeud:
         n = self
         c=0    
         while n!=None :
-            print (n)
+            #print (n)
             n = n.pere
             c+=1
-        print ("Nombre d'étapes de la solution:", c-1)
+        #print ("Nombre d'étapes de la solution:", c-1)
         return            
         
         
@@ -143,9 +143,9 @@ def astar(p,verbose=False,stepwise=False):
         stop_stepwise=""
         if stepwise==True:
             stop_stepwise = input("Press Enter to continue (s to stop)...")
-            print ("best", min_f, "\n", bestNoeud)
-            print ("Frontière: \n", frontiere)
-            print ("Réserve:", reserve)
+            # print ("best", min_f, "\n", bestNoeud)
+            # print ("Frontière: \n", frontiere)
+            # print ("Réserve:", reserve)
             if stop_stepwise=="s":
                 stepwise=False
     
@@ -155,16 +155,16 @@ def astar(p,verbose=False,stepwise=False):
     # Affichage des statistiques (approximatives) de recherche   
     #
     if verbose:
-        print ("=------------------------------=")
-        print ("Nombre de noeuds explorés", len(reserve))
+        # print ("=------------------------------=")
+        # print ("Nombre de noeuds explorés", len(reserve))
         c=0
         for (f,n) in frontiere:
             if p.immatriculation(n.etat) not in reserve:
                 c+=1
-        print ("Nombre de noeuds de la frontière", c)
-        print ("Nombre de noeuds en mémoire:", c + len(reserve))
-        print ("temps de calcul:", time.time() - startTime)
-        print ("=------------------------------=")
+        # print ("Nombre de noeuds de la frontière", c)
+        # print ("Nombre de noeuds en mémoire:", c + len(reserve))
+        # print ("temps de calcul:", time.time() - startTime)
+        # print ("=------------------------------=")
 
     n=bestNoeud
     path = []
